@@ -14,8 +14,8 @@
       <div class="card-body">
       </div>
       <div class="col-md-12">
-        {{#if article}}
-        {{#each article}}
+        {{#if articles}}
+        {{#each articles}}
         <h4 class="card-title">{{this.title}}</h4>
         <h5>{{this.summery}}</h5> <br />
         <p>View article on NHL.com<a href=https://www.nhl.com{{this.link}}> here</a> </p> <p>article id:{{this.id}}
@@ -35,6 +35,6 @@
           </div>
       </div>
     </div>
-    {{/if}}
   </div>
 </div>
+{{/if}}
