@@ -22,7 +22,13 @@
     "no-unused-vars": "error",
     "camelcase": "error",
     "indent": ["error", 2],
-    "quotes": ["error", "single"],
+    "quotes": [
+      "error",
+      "single",
+      {
+        "allowTemplateLiterals": true
+      }
+    ],
     "semi": ["error", "always"],
     "prettier/prettier": "error"
   }

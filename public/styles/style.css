@@ -1,0 +1,84 @@
+@import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css);
+
+body {
+  position: relative;
+  background-color: #fff;
+  margin-bottom: -30px;
+}
+
+hr.body {
+  height: 0px;
+  border: none;
+  border-top: 2px solid black;
+}
+
+.container-fluid {
+  position: relative;
+}
+
+.navbar {
+  position: relative;
+}
+
+.jumbotron {
+  position: relative;
+  background-color: #fff;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#wrapper {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5%;
+}
+
+#articles {
+  margin: auto;
+  overflow: auto;
+  width: 75%;
+  height: 500px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+textarea,
+input {
+  display: block;
+  width: 100%;
+  background-color: #fcf5c7;
+  position: relative;
+}
+
+input {
+  height: 36px;
+  font-size: 24px;
+}
+
+textarea {
+  height: 200px;
+  font-size: 18px;
+}
+
+html {
+  position: relative;
+}
+
+footer {
+  background-color: #fff;
+  border-top: 8px solid #4285f4;
+  height: 50px;
+  /* position: relative; */
+  /* left: 0; */
+  /* right: 0; */
+  /* bottom: 0; */
+}

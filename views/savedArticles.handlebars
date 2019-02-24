@@ -1,0 +1,40 @@
+<div class="jumbotron text-center font-weight-bold centered">
+  <h1 class="display-4 text-center centered">NHL.com newsScraper</h1>
+  <p class="lead centered">View the Saved Articles Here!</p>
+  <img src="/images/puckOnIce.jpg" class="img-fluid" alt="Responsive image">
+
+  <hr class="my-4">
+</div>
+<div class="container-fluid">
+  <img src="/images/hockeyArena.jpg" class="img-fluid" alt="Responsive image">
+  <div id="articles">
+    <div class="card">
+      <div class="card-title">
+      </div>
+      <div class="card-body">
+      </div>
+      <div class="col-md-12">
+        {{#if article}}
+        {{#each article}}
+        <h4 class="card-title">{{this.title}}</h4>
+        <h5>{{this.summery}}</h5> <br />
+        <p>View article on NHL.com<a href=https://www.nhl.com{{this.link}}> here</a> </p> <p>article id:{{this.id}}
+        </p>
+        <a href=/articles/{{this.id}}> json data</a> <button id="saveArticle" class="btn btn-primary"
+          data-id="{{this.id}}" type="submit">Save
+          this Article</button>
+          <hr class="body" />
+          {{/each}}
+          {{else}}
+          <div class="card shadow mb-10 bg-black rounded">
+            <div class="card-header" id="titleinput">
+              <blockquote class="blockquote mb-0">
+                <h1 class="text-center text-danger">Please Save an Article First.</h1>
+              </blockquote>
+            </div>
+          </div>
+      </div>
+    </div>
+    {{/if}}
+  </div>
+</div>
