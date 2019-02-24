@@ -51,10 +51,6 @@ app.get('/', (req, res) => {
   });
 });
 
-app.get('/saved', (req, res) => {
-  res.render('savedArticles');
-});
-
 app.get('/scrape', () => {
   axios.get('https://www.nhl.com').then(res => {
     let $ = cheerio.load(res.data);
@@ -127,7 +123,7 @@ app.post('/articles/saved/:id', (req, res) => {
 app.get('/saved', (req, res) => {
   db.Article.find({ saved: true })
     .populate('notes')
-    .then((error, articles) => {
+    .then((articles, error) => {
       console.log(articles);
       let hsbObject = {
         articles
