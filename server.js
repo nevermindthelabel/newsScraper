@@ -115,8 +115,21 @@ app.get('/saved', (req, res) => {
     });
 });
 
-app.post('articles/deleted/:id', (req, res) => {
+app.post('/articles/deleted/:id', (req, res) => {
   db.Article.findOneAndDelete({ _id: req.params.id });
+});
+
+app.post('/notes/saved/:id', (req, res) => {
+  db.Note.save((note, error) => {
+    if (error) {
+      console.log(error);
+    } else {
+      db.Article.findOneAndUpdate(
+        { _id: req.params.id },
+        { $push: { notes: note } }
+      );
+    }
+  });
 });
 
 app.listen(PORT, () => {
