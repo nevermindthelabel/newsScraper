@@ -14,7 +14,6 @@ const PORT = process.env.PORT || 5000;
 const app = express();
 
 // configure our middleware
-app.use(logger('dev'));
 
 // Parse request body as JSON
 app.use(express.urlencoded({ extended: true }));
