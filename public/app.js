@@ -21,19 +21,19 @@ $(document).ready(function() {
   });
 
   $('.modal').on('click', function() {
-  });
-
-  $('.save').on('click', function() {
-    let newNote = $('#yourNote').val();
-    console.log(newNote);
-    $.ajax({
-      method: 'POST',
-      url: `/notes/saved/${articleId}`,
-      articleId: articleId,
-      text: newNote
+    $('.save').on('click', function() {
+      let newNote = $('#yourNote').val();
+      console.log(newNote);
+      $.ajax({
+        method: 'POST',
+        url: `/notes/saved/`,
+        // articleId: articleId,
+        text: newNote
+      });
+      $('#yourNote').val('');
     });
-    $('#yourNote').val('');
   });
+    
   $('.delete').on('click', function() {
     $.ajax({
       method: 'POST',
