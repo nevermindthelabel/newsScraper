@@ -21,7 +21,7 @@
         <p>View article on NHL.com<a href=https://www.nhl.com{{this.link}}> here</a> </p> <p>article id:{{this.id}}
         </p>
         <button type="button" class="btn btn-danger delete mb-3" data-id={{this._id}}>Delete</button>
-        <button type="button" class="btn btn-success mb-3 ml-3">save note</button>
+        <button type="button" id="saveNote" class="btn btn-success mb-3 ml-3" data-id={{this._id}}>save note</button>
         <textarea name="note" id="articleNote" cols="5" rows="5"></textarea>
         <hr class="body" />
         {{/each}}
