@@ -72,7 +72,7 @@ app.get('/scrape', () => {
           // If an error occurred, log it
           console.log(error);
         });
-      res.end();
+      res.end;
     });
   });
 });
