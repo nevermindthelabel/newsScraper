@@ -71,9 +71,11 @@ app.get('/scrape', () => {
         .catch(error => {
           // If an error occurred, log it
           console.log(error);
+          res.status(500).send('There was an error');
         });
-      res.end;
     });
+    // res.sendStatus(200);
+    location.reload(true);
   });
 });
 
@@ -118,7 +120,8 @@ app.post('/articles/deleted/:id', (req, res) => {
 });
 
 app.post('/notes/saved/:id', (req, res) => {
-  db.Note.save((note, error) => {
+  db.Note.create((note, error) => {
+    console.log(req.body);
     if (error) {
       console.log(error);
     } else {
@@ -126,6 +129,7 @@ app.post('/notes/saved/:id', (req, res) => {
         { _id: req.params.id },
         { $push: { notes: note } }
       );
+      res.send(note);
     }
   });
 });
