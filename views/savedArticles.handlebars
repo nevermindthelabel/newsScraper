@@ -20,10 +20,14 @@
         <h5>{{this.summery}}</h5> <br />
         <p>View article on NHL.com<a href=https://www.nhl.com{{this.link}}> here</a> </p> <button type="button"
             class="btn btn-danger delete mb-3" data-id={{this._id}}>Delete</button>
-            <button type="button" id="saveNote" class="btn btn-success mb-3 ml-3" data-id={{this._id}}>save
-              note</button>
-            <textarea name="note" id="articleNote" cols="5" rows="5"></textarea>
+            {{!-- <button type="button" class="btn btn-success mb-3 ml-1 modal" data-toggle="modal"
+              data-target="#noteModal{{this._id}}" data-id={{this._id}}>Add a Note</button> --}}
+            <button type="button" class="btn btn-success mb-3 ml-1" data-toggle="modal" data-target="#exampleModal">
+              Take a note
+            </button>
+
             <hr class="body" />
+
             {{/each}}
             {{else}}
             <div class="card shadow mb-10 bg-black rounded">
