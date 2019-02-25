@@ -19,4 +19,18 @@ $(document).ready(function() {
     window.location.reload();
     console.log($(this).attr('data-id'));
   });
+
+  $('#saveNote').on('click', function() {
+    let newNote = $('#articleNote').val();
+    console.log(newNote);
+    let articleId = $(this).attr('data-id');
+    console.log(articleId);
+    $.ajax({
+      method: 'POST',
+      url: `/notes/saved/${articleId}`,
+      articleId: articleId,
+      body: newNote
+    });
+    $('#articleNote').val('');
+  });
 });
