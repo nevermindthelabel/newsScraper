@@ -18,12 +18,11 @@
         {{#each article}}
         <h4 class="card-title">{{this.title}}</h4>
         <h5>{{this.summery}}</h5> <br />
-        <p>View article on NHL.com<a href=https://www.nhl.com{{this.link}}> here</a> </p> <p>article id:{{this.id}}
-        </p>
-        <button id="saveArticle" class="btn btn-primary" data-id="{{this.id}}" type="submit">Save
-          this Article</button>
-        <hr class="body" />
-        {{/each}}
+        <p>View article on NHL.com<a href=https://www.nhl.com{{this.link}}> here</a> </p> <button id="saveArticle"
+            class="btn btn-primary" data-id="{{this.id}}" type="submit">Save
+            this Article</button>
+            <hr class="body" />
+            {{/each}}
       </div>
       {{else}}
       <div class="card shadow mb-5 bg-black rounded">
