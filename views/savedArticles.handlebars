@@ -18,19 +18,19 @@
         {{#each articles}}
         <h4 class="card-title">{{this.title}}</h4>
         <h5>{{this.summery}}</h5> <br />
-        <p>View article on NHL.com<a href=https://www.nhl.com{{this.link}}> here</a> </p> <p>article id:{{this.id}}
-        </p>
-        <button type="button" class="btn btn-danger delete mb-3" data-id={{this._id}}>Delete</button>
-        <button type="button" id="saveNote" class="btn btn-success mb-3 ml-3" data-id={{this._id}}>save note</button>
-        <textarea name="note" id="articleNote" cols="5" rows="5"></textarea>
-        <hr class="body" />
-        {{/each}}
-        {{else}}
-        <div class="card shadow mb-10 bg-black rounded">
-          <div class="card-header" id="titleinput">
-            <h1 class="text-center text-danger">Please Save an Article First.</h1>
-          </div>
-        </div>
+        <p>View article on NHL.com<a href=https://www.nhl.com{{this.link}}> here</a> </p> <button type="button"
+            class="btn btn-danger delete mb-3" data-id={{this._id}}>Delete</button>
+            <button type="button" id="saveNote" class="btn btn-success mb-3 ml-3" data-id={{this._id}}>save
+              note</button>
+            <textarea name="note" id="articleNote" cols="5" rows="5"></textarea>
+            <hr class="body" />
+            {{/each}}
+            {{else}}
+            <div class="card shadow mb-10 bg-black rounded">
+              <div class="card-header" id="titleinput">
+                <h1 class="text-center text-danger">Please Save an Article First.</h1>
+              </div>
+            </div>
       </div>
     </div>
   </div>
