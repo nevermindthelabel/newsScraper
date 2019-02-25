@@ -20,18 +20,15 @@
         <h5>{{this.summery}}</h5> <br />
         <p>View article on NHL.com<a href=https://www.nhl.com{{this.link}}> here</a> </p> <p>article id:{{this.id}}
         </p>
-        <a href=/articles/{{this.id}}> json data</a> <button id="saveArticle" class="btn btn-primary"
-          data-id="{{this.id}}" type="submit">Save
+        <button id="saveArticle" class="btn btn-primary" data-id="{{this.id}}" type="submit">Save
           this Article</button>
-          <hr class="body" />
-          {{/each}}
+        <hr class="body" />
+        {{/each}}
       </div>
       {{else}}
       <div class="card shadow mb-5 bg-black rounded">
         <div class="card-header" id="titleinput">
-          <blockquote class="blockquote mb-0">
-            <h1 class="text-center text-danger">Please press scrape button to begin</h1>
-          </blockquote>
+          <h1 class="text-center text-danger">Please press scrape button to begin</h1>
         </div>
       </div>
     </div>
