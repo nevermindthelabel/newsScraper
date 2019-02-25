@@ -11,7 +11,7 @@ $(document).ready(function() {
     });
   });
 
-  $('#saveArticle').on('click', function() {
+  $('.saveArticle').on('click', function() {
     $.ajax({
       method: 'POST',
       url: `/articles/saved/${$(this).attr('data-id')}`
@@ -20,17 +20,24 @@ $(document).ready(function() {
     console.log($(this).attr('data-id'));
   });
 
-  $('#saveNote').on('click', function() {
-    let newNote = $('#articleNote').val();
+  $('.modal').on('click', function() {
+  });
+
+  $('.save').on('click', function() {
+    let newNote = $('#yourNote').val();
     console.log(newNote);
-    let articleId = $(this).attr('data-id');
-    console.log(articleId);
     $.ajax({
       method: 'POST',
       url: `/notes/saved/${articleId}`,
       articleId: articleId,
-      body: newNote
+      text: newNote
     });
-    $('#articleNote').val('');
+    $('#yourNote').val('');
+  });
+  $('.delete').on('click', function() {
+    $.ajax({
+      method: 'POST',
+      url: '/articles/deleted/:id'
+    });
   });
 });
