@@ -20,19 +20,17 @@
         <h5>{{this.summery}}</h5> <br />
         <p>View article on NHL.com<a href=https://www.nhl.com{{this.link}}> here</a> </p> <p>article id:{{this.id}}
         </p>
-        <a href=/articles/{{this.id}}> json data</a> <button id="saveArticle" class="btn btn-primary"
-          data-id="{{this.id}}" type="submit">Save
-          this Article</button>
-          <hr class="body" />
-          {{/each}}
-          {{else}}
-          <div class="card shadow mb-10 bg-black rounded">
-            <div class="card-header" id="titleinput">
-              <blockquote class="blockquote mb-0">
-                <h1 class="text-center text-danger">Please Save an Article First.</h1>
-              </blockquote>
-            </div>
+        <button type="button" class="btn btn-danger delete mb-3" data-id={{this._id}}>Delete</button>
+        <button type="button" class="btn btn-success mb-3 ml-3">save note</button>
+        <textarea name="note" id="articleNote" cols="5" rows="5"></textarea>
+        <hr class="body" />
+        {{/each}}
+        {{else}}
+        <div class="card shadow mb-10 bg-black rounded">
+          <div class="card-header" id="titleinput">
+            <h1 class="text-center text-danger">Please Save an Article First.</h1>
           </div>
+        </div>
       </div>
     </div>
   </div>
